@@ -1,0 +1,11 @@
+/* $Id$ */
+
+@media screen {
+  #access-rules .access-type, #access-rules .rule-type {
+    float: right;
+  }
+  #user-admin-buttons {
+    float: right;
+    clear: left;
+  }
+}

@@ -1,0 +1,10 @@
+/* $Id$ */
+
+@media screen {
+  .update .version-status {
+    float: left;
+  }
+  .update table.version .version-details {
+    direction: ltr;
+  }
+}
