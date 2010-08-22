@@ -5,7 +5,7 @@ function asarko_theme($existing, $type, $theme, $path) {
  return array(); 
 }
 
-function asarko_preprocess_block($vars) {
+function asarko_preprocess_block(&$vars) {
   
   $attr['id'] = "block-{$vars['block']->module}-{$vars['block']->delta}";
   $attr['class'] = 'block';
@@ -14,5 +14,28 @@ function asarko_preprocess_block($vars) {
   
   $vars['attr'] = $attr;
   $vars['empty'] = empty($vars['block']->content);
+  
+}
+
+function asarko_preprocess_node(&$vars) {
+  
+  $attr['id'] = "node-{$vars['node']->nid}";
+  
+  $attr['class'] = "node";
+  if ($vars['node']->page) {
+    $attr['class'] .= ' page';
+  } else {
+    $attr['class'] .= ' teaser';
+  }
+  if ($vars['node']->sticky) {
+    $attr['class'] .= ' sticky';
+  }
+  if (!$vars['node']->status) {
+    $attr['class'] .= ' node-unpublished';
+  }
+  $attr['class'] .= ' clear-block';
+  
+  $vars['attr'] = $attr;
+  $vars['empty'] = empty($vars['node']->content);
   
 }
