@@ -50,11 +50,10 @@
 ?>
 <article<?php print drupal_attributes($attr); ?>>
 
-<?php if (!$page || $submitted || $picture): ?>
-  
   <header>
-    
-  <?php if (!$page): ?>
+  <?php if ($page): ?>
+    <h1 id="page-title" class="title"><?php print $title; ?></h1>
+  <?php else: ?>
     <h1 class="node-title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h1>
   <?php endif; ?>
     
@@ -64,10 +63,7 @@
       <small class="submitted"><?php print $submitted ?></small>
     </div>
   <?php endif; ?>
-  
   </header>
-  
-<?php endif; ?>
 
   <div class="content">
     <?php print $content ?>

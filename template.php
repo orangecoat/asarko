@@ -22,7 +22,7 @@ function asarko_preprocess_node(&$vars) {
   $attr['id'] = "node-{$vars['node']->nid}";
   
   $attr['class'] = "node";
-  if ($vars['node']->page) {
+  if ($vars['page']) {
     $attr['class'] .= ' page';
   } else {
     $attr['class'] .= ' teaser';
@@ -37,5 +37,13 @@ function asarko_preprocess_node(&$vars) {
   
   $vars['attr'] = $attr;
   $vars['empty'] = empty($vars['node']->content);
+  
+}
+
+function asarko_preprocess_page(&$vars) {
+  
+  if ($vars['node']) {
+    unset($vars['title']);
+  }
   
 }
