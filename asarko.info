@@ -18,6 +18,7 @@ stylesheets[all][] = "drupal/update.css"
 stylesheets[all][] = "drupal/user.css"
 
 stylesheets[all][] = "css/reset.css"
+stylesheets[all][] = "css/base.css"
 stylesheets[all][] = "css/print.css"
 
 ; Unset or re-implement invasive CSS styles

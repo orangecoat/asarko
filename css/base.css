@@ -1,0 +1,54 @@
+/* $Id$ */
+
+/* Reset Drupal links - from Tao (code.developmentseed.org/tao) */
+ul.links { margin: 0; padding: 0; list-style: none; }
+ul.links li { float:left; /* LTR */ }
+
+ul.links.inline,
+ul.links.inline li,
+ul.links.inline li a {
+  float:none;
+  display:inline;
+}
+
+/* Clearfix from html5boilerplate.com */
+.clear-block:after, ul.links:after { 
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+.clearfix, ul.links { display: inline-block; }
+.clearfix, ul.links { display: block; }
+
+/* Base styles, probably will and should be overridden */
+body, input, textarea, select {
+  font: normal 300 12px/1.5 "Helvetica Nueue", Arial, Helvetica, sans-serif;
+  color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1              { font-size: 36px; line-height: 1.5; }
+h2, .teaser h1  { font-size: 24px; line-height: 1.5; }
+h3, .teaser h2  { font-size: 20px; line-height: 1.8; }
+h4, .teaser h3  { font-size: 15px; line-height: 1.2; }
+h5, .teaser h4  { font-size: 12px; line-height: 1.5; }
+h6, .teaser h5  { font-size: 10px; line-height: 1.8; }
+
+p, ul, ol, dl, address, table { margin-bottom: 18px; }
+.node :last-child,
+.block :last-child { margin-bottom: 0; }
+
+ul { list-style: disc inside; }
+ol { list-style: decimal inside; }
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin-left: 20px; }
+
+table { width: 100%; }
+td, th, caption { text-align: left; /* LTR */ }
+caption { font-size: 20px; line-height: 1.8; font-style: italic; }
+td, th { padding: 9px 5px 8px; border-bottom: 1px solid #999; }
+th { background: #eee; }
