@@ -42,6 +42,10 @@ function asarko_preprocess_node(&$vars) {
 
 function asarko_preprocess_page(&$vars) {
   
+  // Add modernizr to head and fix duplicate content-type meta tag
+  $vars['head'] = drupal_set_html_head('<script src="' . base_path() . path_to_theme() .'/js/modernizr.min.js"></script>');
+  
+  // If the page is a node page, we want the title to be inside the article tag
   if ($vars['node']) {
     unset($vars['title']);
   }
