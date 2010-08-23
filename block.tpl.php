@@ -30,7 +30,7 @@
   
 <section<?php print drupal_attributes($attr); ?>>
 <?php if ($block->subject): ?>
-  <h1 class="block-title"><?php print $block->subject ?></h1>
+  <h2 class="block-title"><?php print $block->subject ?></h2>
 <?php endif; ?>
   <div class="content">
     <?php print $block->content ?>

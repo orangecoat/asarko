@@ -54,7 +54,7 @@
   <?php if ($page): ?>
     <h1 id="page-title" class="title"><?php print $title; ?></h1>
   <?php else: ?>
-    <h1 class="node-title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h1>
+    <h2 class="node-title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
   <?php endif; ?>
     
   <?php if ($picture || $submitted): ?>

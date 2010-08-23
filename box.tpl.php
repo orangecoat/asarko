@@ -16,7 +16,7 @@
 <section class="box">
 
 <?php if ($title): ?>
-  <h1 class="box-title"><?php print $title ?></h1>
+  <h2 class="box-title"><?php print $title ?></h2>
 <?php endif; ?>
 
   <div class="content"><?php print $content ?></div>
