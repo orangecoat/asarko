@@ -52,6 +52,9 @@ function asarko_preprocess_page(&$vars) {
     $vars['content_tag'] = 'section';
   }
   
+  $attr['class'] = $vars['body_classes'] . ' asarko';
+  $vars['attr'] = $attr;
+  
 }
 
 function asarko_preprocess_comment(&$vars) {

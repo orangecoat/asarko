@@ -88,7 +88,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
 </head>
-<body class="<?php print $body_classes; ?>">
+<body<?php print drupal_attributes($attr); ?>>
 
   <header id="page-header">
     <div class="container clear-block">
