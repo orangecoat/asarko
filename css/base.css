@@ -26,7 +26,6 @@ ol ul { margin-left: 2em; }
 
 table { width: 100%; }
 td, th, caption { text-align: left; /* LTR */ }
-caption { font-size: 20px; line-height: 1.8; font-style: italic; }
 td, th { padding: 9px 5px 8px; border-bottom: 1px solid #999; }
 th { background: #eee; }
 
