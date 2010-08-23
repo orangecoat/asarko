@@ -158,20 +158,24 @@
       <?php endif; ?>
       
       <?php if (!empty($mission)): ?>
-        <div id="mission">
+        <section id="mission">
           <h2 class="visuallyhidden">Mission</h2>
           <?php print $mission; ?>
-        </div>
+        </section>
       <?php endif; ?>
 
       <?php if (!empty($help)): ?>
-        <h2 class="visuallyhidden">Help</h2>
-        <?php print $help; ?>
+        <section id="help">
+          <h2 class="visuallyhidden">Help</h2>
+          <?php print $help; ?>
+        </section>
       <?php endif; ?>
       
       <?php if (!empty($messages)): ?>
-        <h2 class="visuallyhidden">Alerts</h2>
-        <?php print $messages; ?>
+        <section id="messages">
+          <h2 class="visuallyhidden">Alerts</h2>
+          <?php print $messages; ?>
+        </section>
       <?php endif; ?>
       
         <<?php print $content_tag; ?> id="content">
