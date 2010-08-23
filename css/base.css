@@ -1,30 +1,5 @@
 /* $Id$ */
 
-/* Reset Drupal links - from Tao (code.developmentseed.org/tao) */
-ul.tabs { margin: 0; padding: 0; list-style: none; }
-ul.tabs li { float:left; /* LTR */ }
-
-ul.links.inline,
-ul.links.inline li,
-ul.links.inline li a {
-  float:none;
-  display:inline;
-}
-
-/* Clearfix from html5boilerplate.com */
-ul.links:after,
-.clear-block:after { 
-  content: "."; 
-  display: block; 
-  height: 0; 
-  clear: both; 
-  visibility: hidden; 
-}
-ul.tabs,
-.clearfix { display: inline-block; }
-ul.tabs,
-.clearfix { display: block; }
-
 /* Base styles, probably will and should be overridden */
 body, input, textarea, select {
   font: normal 300 12px/1.5 "Helvetica Nueue", Arial, Helvetica, sans-serif;
@@ -54,3 +29,37 @@ td, th, caption { text-align: left; /* LTR */ }
 caption { font-size: 20px; line-height: 1.8; font-style: italic; }
 td, th { padding: 9px 5px 8px; border-bottom: 1px solid #999; }
 th { background: #eee; }
+
+/* Reset Drupal links - from Tao (code.developmentseed.org/tao) */
+ul.tabs { margin: 0; padding: 0; list-style: none; }
+ul.tabs li { float:left; /* LTR */ }
+
+ul.links.inline,
+ul.links.inline li,
+ul.links.inline li a {
+  float:none;
+  display:inline;
+}
+
+/* Clearfix from html5boilerplate.com */
+ul.tabs:after,
+.clear-block:after { 
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+ul.tabs,
+.clearfix { display: inline-block; }
+ul.tabs,
+.clearfix { display: block; }
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/ 
+   Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal! */
+.visuallyhidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
