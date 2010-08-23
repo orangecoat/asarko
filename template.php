@@ -53,3 +53,13 @@ function asarko_preprocess_page(&$vars) {
   }
   
 }
+
+function asarko_preprocess_comment(&$vars) {
+  
+  $attr['class'] =  'comment';
+  $attr['class'] .= $comment->new ? ' comment-new' : '';
+  $attr['class'] .= ' clear-block';
+  
+  $vars['attr'] = $attr;
+  
+}
