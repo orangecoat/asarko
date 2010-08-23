@@ -31,7 +31,7 @@
  * @see theme_comment_wrapper()
  */
 ?>
-<section class="comments-wrapper">
+<section id="comments" class="comments-wrapper">
   <h2>Comments</h2>
   <?php print $content; ?>
 </section>
