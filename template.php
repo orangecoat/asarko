@@ -47,7 +47,9 @@ function asarko_preprocess_page(&$vars) {
   
   // If the page is a node page, we want the title to be inside the article tag
   if ($vars['node']) {
-    unset($vars['title']);
+    $vars['content_tag'] = 'article';
+  } else {
+    $vars['content_tag'] = 'section';
   }
   
 }

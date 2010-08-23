@@ -128,8 +128,8 @@
       
       <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
         <?php if (!empty($primary_links)): ?>
-          <h2 class="visuallyhidden">Main Menu</h2>
           <nav id="primary" class="clear-block">
+            <h2 class="visuallyhidden">Main Menu</h2>
             <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
           </nav>
         <?php endif; ?>
@@ -174,25 +174,25 @@
         <?php print $messages; ?>
       <?php endif; ?>
       
-        <div id="content">
-          <?php if (!empty($tabs)): ?>
-            <div class="tabs">
-              <h2 class="visuallyhidden">Page links</h2>
-              <?php print $tabs; ?>
-            </div>
-          <?php endif; ?>
-
+        <<?php print $content_tag; ?> id="content">
         <?php if (!empty($title)): ?>
           <h1 class="title" id="page-title">
             <?php print $title; ?>
           </h1>
+        <?php elseif ($is_front): ?>
+          <h1>Latest Items</h1>
         <?php endif; ?>
         
-          <div id="content-content" class="clear-block">
-            <?php print $content; ?>
-          </div> <!-- /content-content -->
+        <?php if (!empty($tabs)): ?>
+          <div class="tabs">
+            <h2 class="visuallyhidden">Page links</h2>
+            <?php print $tabs; ?>
+          </div>
+        <?php endif; ?>
+        
+          <?php print $content; ?>
           <?php print $feed_icons; ?>
-        </div> <!-- /content -->
+        </<?php print $content_tag; ?>> <!-- /content -->
 
       </div></div> <!-- /main-squeeze /main -->
       

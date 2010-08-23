@@ -48,14 +48,11 @@
  * @see template_preprocess_node()
  */
 ?>
-<article<?php print drupal_attributes($attr); ?>>
+<?php if (!$page): ?><article<?php print drupal_attributes($attr); ?>><?php endif; ?>
 
+<?php if (!$page || $picture || $submitted): ?>
   <header>
-  <?php if ($page): ?>
-    <h1 id="page-title" class="title"><?php print $title; ?></h1>
-  <?php else: ?>
     <h2 class="node-title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-  <?php endif; ?>
     
   <?php if ($picture || $submitted): ?>
     <div class="meta">
@@ -64,6 +61,7 @@
     </div>
   <?php endif; ?>
   </header>
+<?php endif; ?>
 
   <div class="content">
     <?php print $content ?>
@@ -79,4 +77,4 @@
 <?php endif; ?>
   
   
-</article>
+<?php if (!$page): ?></article><?php endif; ?>
