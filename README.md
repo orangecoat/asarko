@@ -7,3 +7,5 @@ So far, only html.tpl.php, page.tpl.php, node.tpl.php and block.tpl.php are over
 ## Full Drupal Reset
 For the 7-x branch, I'm using Tao's CSS, CSS overrides, and drupal.css completely. I will probably make it more my own as time goes by.
 
+## Modernizr
+Asarko includes Modernizr, which registers HTML5 elements in IE. On top of that, it also does some feature-detecting. If you'd rather use another HTML5 shim, override the <code>html5_shim</code> variable in <code>hook_preprocess_html()</code>.
