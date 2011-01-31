@@ -114,14 +114,14 @@
         <?php if ($main_menu): ?>
           <nav id="main-menu">
             <h2><?php print t('Main menu'); ?></h2>
-            <?php theme('links', $main_menu); ?>
+            <?php print theme('links', array('links' => $main_menu)); ?>
           </nav>
         <?php endif; ?>
         
         <?php if ($secondary_menu): ?>
           <nav id="secondary-menu">
             <h2><?php print t('Secondary menu'); ?></h2>
-            <?php print theme('links', $secondary_menu); ?>
+            <?php print theme('links', array('links' => $secondary_menu)); ?>
           </nav>
         <?php endif; ?>
       </div><!-- /#navigation -->
@@ -133,7 +133,6 @@
 
   <?php if ($breadcrumb): ?>
     <nav id="breadcrumb">
-      <h2 class="element-invisible"><?php print t('You are here:'); ?></h2>
       <?php print $breadcrumb; ?>
     </nav>
   <?php endif; ?>
