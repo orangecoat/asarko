@@ -4,4 +4,5 @@ description = "Asarko is a base theme that resets all of Drupal invasive styles 
 core = "7.x"
 engine = "phptemplate"
 
-stylesheets[all][] = "css/reset.css"
+stylesheets[all][] = "reset.css"
+stylesheets[all][] = "drupal.css"
