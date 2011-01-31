@@ -1,42 +1,7 @@
 ; $Id$
 name = "Asarko"
 description = "Asarko is a base theme that resets all of Drupal invasive styles and overrides default markup with HTML5-based markup"
-core = "6.x"
+core = "7.x"
 engine = "phptemplate"
 
-regions[left] = "Left sidebar"
-regions[right] = "Right sidebar"
-regions[content] = "Content"
-regions[header] = "Header"
-regions[footer] = "Footer"
 
-; CSS Overrides
-stylesheets[all][] = "drupal/block.css"
-stylesheets[all][] = "drupal/openid.css"
-stylesheets[all][] = "drupal/system.css"
-stylesheets[all][] = "drupal/update.css"
-stylesheets[all][] = "drupal/user.css"
-
-stylesheets[all][] = "css/reset.css"
-stylesheets[all][] = "css/base.css"
-stylesheets[all][] = "css/print.css"
-
-; Unset or re-implement invasive CSS styles
-; Things not overridden (credit to Tao: code.developmentseed.org/tao):
-;   color.css
-;   locale.css
-stylesheets[all][] = "aggregator.css"
-stylesheets[all][] = "book.css"
-stylesheets[all][] = "comment.css"
-stylesheets[all][] = "dblog.css"
-stylesheets[all][] = "forum.css"
-stylesheets[all][] = "help.css"
-stylesheets[all][] = "node.css"
-stylesheets[all][] = "poll.css"
-stylesheets[all][] = "profile.css"
-stylesheets[all][] = "search.css"
-stylesheets[all][] = "defaults.css"
-stylesheets[all][] = "maintenance.css"
-stylesheets[all][] = "system-menus.css"
-stylesheets[all][] = "taxonomy.css"
-stylesheets[all][] = "tracker.css"
