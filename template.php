@@ -71,3 +71,14 @@ function asarko_preprocess_html(&$vars) {
 function asarko_preprocess_page(&$vars) {
   $vars['content_tag'] = isset($vars['node']) ? 'article' : 'section';
 }
+
+function asarko_preprocess_block(&$vars) {
+
+  if ($vars['block']->module == 'menu_block') {
+    $tag = 'nav';
+  } else {
+    $tag = 'section';
+  }
+  $vars['wrapper_tag'] = $tag;
+}
+

@@ -42,7 +42,7 @@
  * @see template_process()
  */
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<<?php print $wrapper_tag; ?> id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -53,4 +53,4 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>
-</section>
+</<?php print $wrapper_tag; ?>>
