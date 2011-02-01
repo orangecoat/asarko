@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Implements hook_theme()
+ */
+function asarko_theme() {
+
+  return $items = array(
+    'html5shim' => array(
+      'template' => 'html5shim',
+    ),
+  );
+}
+
+/**
  * Implements hook_css_alter().
  * Taken directly from Tao
  *
@@ -54,8 +66,6 @@ function asarko_css_alter(&$css) {
 
 function asarko_preprocess_html(&$vars) {
   $vars['classes_array'][] = 'asarko';
-  $vars['html5_shim'] = '<script src="' . base_path() .
-    drupal_get_path('theme', 'asarko') . '"></script>' . "\n";
 }
 
 function asarko_preprocess_page(&$vars) {
