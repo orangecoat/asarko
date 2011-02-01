@@ -64,6 +64,12 @@ function asarko_css_alter(&$css) {
   $css = array_diff_key($css, $exclude);
 }
 
+function asarko_process_page(&$vars) {
+  if (!isset($vars['title'])) {
+    $vars['content_tag'] = 'div';
+  }
+}
+
 function asarko_preprocess_html(&$vars) {
   $vars['classes_array'][] = 'asarko';
 }
