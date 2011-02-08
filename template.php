@@ -82,9 +82,15 @@ function asarko_preprocess_block(&$vars) {
 
   if ($vars['block']->module == 'menu_block') {
     $tag = 'nav';
+  } else if ($vars['block_html_id'] == 'block-system-main' || empty($vars['block']->subject)) {
+    // since this block doesn't have a title, just div it
+    $tag = 'div';
   } else {
     $tag = 'section';
   }
   $vars['wrapper_tag'] = $tag;
 }
 
+function asarko_preprocess_node(&$vars) {
+  $vars['node_tag'] = $vars['page'] ? 'div' : 'article';
+}

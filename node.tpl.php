@@ -79,7 +79,7 @@
  * @see template_process()
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<<?php print $node_tag; ?> id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -106,4 +106,4 @@
 
   <?php print render($content['comments']); ?>
 
-</article>
+</<?php print $node_tag; ?>>
