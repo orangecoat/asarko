@@ -1,1 +1,2 @@
-<script src="<?php print base_path() . drupal_get_path('theme', 'asarko'); ?>/modernizr.min.js"></script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+

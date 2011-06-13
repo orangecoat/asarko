@@ -1,8 +1,12 @@
-; $Id$
 name = "Asarko"
 description = "Asarko is a base theme that resets all of Drupal invasive styles and overrides default markup with HTML5-based markup"
+base theme = boron
 core = "7.x"
 engine = "phptemplate"
 
-stylesheets[all][] = "reset.css"
-stylesheets[all][] = "drupal.css"
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/keep/system.base.css
+stylesheets[all][] = css/keep/overlay-parent.css
+stylesheets[all][] = css/keep/contextual.css
+stylesheets[all][] = css/keep/shortcut.css
+stylesheets[all][] = css/keep/toolbar.css

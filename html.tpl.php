@@ -1,5 +1,4 @@
 <?php
-// $Id: html.tpl.php,v 1.6 2010/11/24 03:30:59 webchick Exp $
 
 /**
  * @file
@@ -13,15 +12,7 @@
  *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
  * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
  * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
- * - $head_title: A modified version of the page title, for use in the TITLE
- *   tag.
- * - $head_title_array: (array) An associative array containing the string parts
- *   that were used to generate the $head_title variable, already prepared to be
- *   output as TITLE tag. The key/value pairs may contain one or more of the
- *   following, depending on conditions:
- *   - title: The title of the current page, if any.
- *   - name: The name of the site.
- *   - slogan: The slogan of the site, if any, and if there is no title.
+ * - $head_title: A modified version of the page title, for use in the TITLE tag.
  * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
  *   so on).
  * - $styles: Style tags necessary to import all CSS files for the page.
@@ -42,25 +33,33 @@
  * @see template_process()
  */
 ?>
-<!doctype html>
-<html
-  lang="<?php print $language->language; ?>"
+<!DOCTYPE html>
+<html lang="<?php print $language->language; ?>"
   dir="<?php print $language->dir; ?>">
-<head>
-  <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <?php print theme('html5shim'); ?>
-</head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">
-      <?php print t('Skip to main content'); ?>
-    </a>
-  </div>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
-  <?php print $scripts; ?>
-</body> 
+
+  <head<?php print $rdf->profile; ?>>
+
+    <?php print $head; ?>
+    <title><?php print $head_title; ?></title>
+    <?php print $styles; ?>
+    <?php print theme('html5shim'); ?>
+
+  </head>
+
+  <body class="<?php print $classes; ?>" <?php print $attributes;?>>
+
+    <div id="skip-link">
+      <a href="#content" class="element-invisible element-focusable">
+        <?php print t('Skip to main content'); ?>
+      </a>
+    </div>
+
+    <?php print $page_top; ?>
+    <?php print $page; ?>
+    <?php print $page_bottom; ?>
+
+    <?php print $scripts; ?>
+
+  </body>
 </html>
+
