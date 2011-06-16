@@ -42,11 +42,6 @@ function asarko_preprocess_node(&$vars) {
 
 function asarko_preprocess_page(&$vars) {
 
-  // Add modernizr after stylesheets
-  $vars['styles'] .= '<script src="' . base_path() .
-    drupal_get_path('theme', 'asarko') . '/js/modernizr.min.js"></script>'.
-    "\n";
-
   // If the page is a node page, we want the title to be inside the article tag
   if ($vars['node']) {
     $vars['content_tag'] = 'article';
