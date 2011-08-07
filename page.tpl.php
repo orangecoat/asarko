@@ -100,10 +100,6 @@
   <div id="page-main-inner">
     <div id="content" role="main">
 
-      <?php if ($page['highlighted']): ?>
-        <div id="highlighted"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-
       <?php if ($breadcrumb): ?>
         <nav id="breadcrumb">
           <h2>You are here:</h2>
@@ -122,8 +118,6 @@
       <?php if ($tabs): ?>
         <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
-
-      <?php print render($page['help']); ?>
 
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
