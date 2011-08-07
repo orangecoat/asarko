@@ -90,21 +90,6 @@
       </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
-    <?php if ($main_menu): ?>
-      <nav id="main-navigation" role="navigation">
-        <h2>Main Navigation</h2>
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
-      </nav> <!-- /#main-navigation -->
-    <?php endif; ?>
-
-    <?php if ($secondary_menu): ?>
-      <nav id="secondary-navigation" role="navigation">
-        <h2>Secondary Navigation</h2>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
-      </nav> <!-- /#navigation -->
-    <?php endif; ?>
-
-
     <?php print render($page['header']); ?>
 
   </div> <!-- /#page-header-inner -->
