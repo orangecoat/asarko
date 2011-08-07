@@ -43,6 +43,7 @@
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print theme('html5shim'); ?>
+    <?php print $scripts; ?>
 
   </head>
 
@@ -57,8 +58,6 @@
     <?php print $page_top; ?>
     <?php print $page; ?>
     <?php print $page_bottom; ?>
-
-    <?php print $scripts; ?>
 
   </body>
 </html>
