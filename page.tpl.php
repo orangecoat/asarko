@@ -107,7 +107,11 @@
         </nav>
       <?php endif; ?>
 
-      <?php print $messages; ?>
+      <?php if ($messages): ?>
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+      <?php endif; ?>
 
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -116,7 +120,7 @@
       <?php print render($title_suffix); ?>
 
       <?php if ($tabs): ?>
-        <div class="tabs"><?php print render($tabs); ?></div>
+        <div id="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
 
       <?php if ($action_links): ?>
