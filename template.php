@@ -7,7 +7,7 @@ function asarko_theme() {
 
   return $items = array(
     'html5shim' => array(
-      'template' => 'html5shim',
+      'template' => 'templates/html5shim',
     ),
   );
 }
